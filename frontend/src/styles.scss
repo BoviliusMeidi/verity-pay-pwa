@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  /* --- 1. PRIMITIVE PALETTE ---
+     The core brand colors. These should not be used directly in
+     components; they serve as the base for semantic tokens.
+  */
+  --vp-navy-dark: #101820;
+  --vp-navy-deep: #0d141b;
+  --vp-slate: #1c2632;
+  --vp-white: #f8f9fa;
+  --vp-silver: #a9a9a9;
+  --vp-emerald: #50c878;
+  --vp-crimson: #b22222;
+  --vp-gold: #d4af37;
+  --vp-platinum: #2d3748;
+
+  /* --- 2. SEMANTIC TOKENS ---
+     Colors mapped to specific UI roles. Use these in your components
+     to ensure consistency across the application.
+  */
+
+  /* Backgrounds: Defining the layout layers */
+  --vp-app-bg: var(--vp-navy-dark);
+  --vp-card-bg: var(--vp-slate);
+  --vp-status-bar: var(--vp-navy-deep);
+
+  /* Typography: Defining the content hierarchy */
+  --vp-text-main: var(--vp-white);
+  --vp-text-secondary: var(--vp-silver);
+  --vp-text-navbar: var(--vp-silver);
+
+  /* Status & Actions: Feedback and interactivity */
+  --vp-color-income: var(--vp-emerald);
+  --vp-color-expense: var(--vp-crimson);
+  --vp-color-action: var(--vp-gold);
+
+  /* Borders & Dividers: Visual structure */
+  --vp-border-color: var(--vp-platinum);
+  --vp-safe-area-bottom: env(safe-area-inset-bottom);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--vp-app-bg);
+  color: var(--vp-text-main);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1rem;
+}
