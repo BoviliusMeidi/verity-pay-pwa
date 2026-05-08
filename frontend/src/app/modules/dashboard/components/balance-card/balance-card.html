@@ -1,0 +1,27 @@
+<div class="balance-card-container">
+  <article class="balance-card">
+    <div class="balance-card-wrapper">
+      <div class="balance-card-content">
+        <div class="balance-card-item balance-card-item--header">
+          <span class="account-type">{{ accountLabel() }}</span>
+          <button class="btn-icon" (click)="onSeeAll.emit()">
+            <i class="icon-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="balance-card-item balance-card-item--main">
+          <h2 class="amount">
+            @if (isContentVisible()) {
+            {{ balance() | currency: currencyCode() : 'symbol-narrow' }}
+            } @else {
+            **********
+            }
+          </h2>
+          <button class="btn-icon" (click)="handleToggle()">
+            <img [src]="eyeIcon()" alt="" sizes="" srcset="">
+          </button>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
