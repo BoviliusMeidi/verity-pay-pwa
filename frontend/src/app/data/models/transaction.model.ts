@@ -6,11 +6,13 @@ export interface Transaction {
   user_id: string;
   from_account_id?: string;
   to_account_id?: string;
+  account_id?:string;
   category_id?: string;
   amount: number;
   fee: number;
   type: TransactionType;
   status: TransactionStatus;
+  note: string,
   transaction_date: Date | string;
   created_at: Date | string;
   updated_at: Date | string;
