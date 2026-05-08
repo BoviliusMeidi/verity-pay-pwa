@@ -1,0 +1,56 @@
+.balance-card {
+  background: linear-gradient(135deg, #2F7E79 0%, #2F7E79 100%);
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+
+    &--main {
+      margin: 16px 0;
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin: 0;
+      }
+    }
+
+    &__info {
+      display: flex;
+      gap: 16px;
+      width: 100%;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    &__income, &__expenses {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+  }
+}
+
+.btn-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 8px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+
+  &:hover { opacity: 1; }
+}
